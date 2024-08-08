@@ -23,7 +23,7 @@ Route::middleware('auth:sanctum')->get('/user', function (Request $request) {
 
 });
 
-Route::middleware(['auth:sanctum'])->group(function () {
+// Route::middleware(['auth:sanctum'])->group(function () {
     Route::post('logout', [AuthController::class, 'logout']);
 
     Route::get('kategori', [KategoriController::class, 'index']);
@@ -44,7 +44,7 @@ Route::middleware(['auth:sanctum'])->group(function () {
     Route::put('aktor/{id}', [AktorController::class, 'update']);
     Route::delete('aktor/{id}', [AktorController::class, 'destroy']);
 
-});
+// });
 
 // auth route
 Route::post('login', [AuthController::class, 'login']);
